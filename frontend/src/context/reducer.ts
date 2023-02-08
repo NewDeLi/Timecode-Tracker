@@ -12,5 +12,14 @@ export const AppReducer = (state: AppState, action: AppContextActions) => {
         ...state,
         time: action.payload,
       };
+    case ActionTypes.SET_TIMECODES_FULL_GAME:{
+      if(typeof window !== "undefined"){
+        localStorage.setItem("timecodes_full_game", JSON.stringify(action.payload))
+      }
+      return{
+        ...state, 
+        timecodesFullGame:[...state.timecodesFullGame, action.payload]
+      }
+    }  
   }
 };

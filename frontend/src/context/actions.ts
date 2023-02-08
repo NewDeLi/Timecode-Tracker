@@ -14,4 +14,10 @@ export const AppActions = (dispatch: React.Dispatch<AppContextActions>) => ({
       payload,
     });
   },
+    setTimecodesFullGame:(payload: {homeTeam:{name:string, timecodes:number[]}, guestTeam:{name:string, timecodes:number[]}})=>{
+      dispatch({
+        type: ActionTypes.SET_TIMECODES_FULL_GAME,
+        payload
+      })
+    }
 });

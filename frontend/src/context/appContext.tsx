@@ -11,6 +11,8 @@ interface AppContext {
 const initialState: AppState = {
   formState: { homeTeam: "", guestTeam: "" },
   time: 0,
+  // @ts-ignore
+  timecodesFullGame:[ JSON.parse(localStorage.getItem("timecodes_full_game"))]||[]
 };
 
 const appContext = createContext<AppContext>({ state: initialState });

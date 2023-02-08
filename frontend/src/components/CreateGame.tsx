@@ -9,7 +9,10 @@ const CreateGame = ({ setIsClicked }: any) => {
   };
 
   return (
-    <div>
+    <div className="py-4">
+      <h1 className="text-center text-lg">
+        <span className="border-b-2 border-[#2c76ffd3]">New Game</span>
+      </h1>
       <form
         ref={formRef}
         className="flex flex-col items-center"
@@ -30,7 +33,7 @@ const CreateGame = ({ setIsClicked }: any) => {
               type="text"
               id="homeTeam"
               placeholder="Add home team name"
-              className="p-2"
+              className="p-2 border"
               onChange={(e) =>
                 actions?.setTeamName({
                   ...state.formState,
@@ -43,8 +46,9 @@ const CreateGame = ({ setIsClicked }: any) => {
             <label>Guest:</label>
             <input
               type="text"
+              id="guestTeam"
               placeholder="Add guest team name"
-              className="p-2"
+              className="p-2 border"
               onChange={(e) =>
                 actions?.setTeamName({
                   ...state.formState,
@@ -53,8 +57,11 @@ const CreateGame = ({ setIsClicked }: any) => {
               }
             />
           </div>
-          <button type="submit" className="bg-green-500 text-white p-2 rounded my-2">
-            Start new Game
+          <button
+            type="submit"
+            className="bg-[#2c76ff49] text-[#2c76ffd3] p-2 rounded my-2 shadow"
+          >
+            Submit
           </button>
         </div>
       </form>
@@ -63,3 +70,5 @@ const CreateGame = ({ setIsClicked }: any) => {
 };
 
 export default CreateGame;
+
+

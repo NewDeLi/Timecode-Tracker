@@ -43,16 +43,20 @@ const StopWatch = ({ time, setTime }: any) => {
   };
 
   return (
-    <div className="text-red-500 flex flex-col items-center">
-      <Timer time={time} />
-      <ControlButtons
-        active={isActive}
-        isPaused={isPaused}
-        handleStart={handleStart}
-        handlePauseResume={handlePauseResume}
-        handleReset={handleReset}
-      />
-    </div>
+    <>
+      <div className="flex flex-col items-center">
+        <div className="text-[#2c76ffd3]  border-2 border-[#2c76ff49] rounded-full w-20 h-20   flex justify-center items-center">
+          <Timer time={time} />
+        </div>
+        <ControlButtons
+          active={isActive}
+          isPaused={isPaused}
+          handleStart={handleStart}
+          handlePauseResume={handlePauseResume}
+          handleReset={handleReset}
+        />
+      </div>
+    </>
   );
 };
 
